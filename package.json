@@ -1,0 +1,15 @@
+{
+  "name": "ground-up-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/mike-goitia/ground-up-server",
+  "author": "Michael Sarmiento",
+  "license": "MIT",
+  "scripts": {
+    "dev": "node index.js"
+  },
+  "dependencies": {
+    "apollo-server": "^2.19.0",
+    "graphql": "^15.4.0"
+  }
+}
