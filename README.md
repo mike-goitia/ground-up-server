@@ -9,3 +9,11 @@ The **Ground Up Server** project is a personal project with a goal of building a
 - [ ] Create a MongoDb persistence layer
 - [ ] Create CI/CD pipeline with Circle CI
 - [ ] Deploy on Elastic Beanstalk
+
+
+### Setup Apollo Server
+[Getting Started](https://www.apollographql.com/docs/apollo-server/getting-started/)
+
+### Setup Babel to allow ES6, nodemon, and dotenv
+[The minimal Node.js with Babel Setup](https://www.robinwieruch.de/minimal-node-js-babel-setup)
+
