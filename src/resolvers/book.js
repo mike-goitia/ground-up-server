@@ -1,16 +1,8 @@
-const books = [
-  {
-    title: 'The Awakening',
-    author: 'Me',
-  },
-  {
-    title: 'City of Glass',
-    author: 'You',
-  },
-];
+import { findRandomBook, getAllBooks } from '../services/book.js';
 
 export const book = {
   Query: {
-    books: () => books,
+    book: () => findRandomBook(),
+    books: () => getAllBooks(),
   },
 };
