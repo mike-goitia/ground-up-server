@@ -13,7 +13,7 @@ Mostly a boilerplate to get some of my personal projects running without startin
 - [ ] Create CI/CD pipeline with Circle CI
 - [ ] Deploy on Elastic Beanstalk
 
-## Guides I used
+## Guides I Used
 ### Setup Apollo Server
 [Getting Started](https://www.apollographql.com/docs/apollo-server/getting-started/)
 
