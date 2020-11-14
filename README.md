@@ -9,10 +9,11 @@ Mostly a boilerplate to get some of my personal projects running without startin
 ## Goals
 - [X] Create a Node + Apollo GraphQL Backend Service
 - [X] Create a MongoDb persistence layer
+- [ ] Setup Linting and AirBnB Style Guide
 - [ ] Create CI/CD pipeline with Circle CI
 - [ ] Deploy on Elastic Beanstalk
 
-
+## Guides I used
 ### Setup Apollo Server
 [Getting Started](https://www.apollographql.com/docs/apollo-server/getting-started/)
 
@@ -23,5 +24,5 @@ Mostly a boilerplate to get some of my personal projects running without startin
 Obtain the mongoDB URI from your service and add to .env file. Never add a .env file to version control.
 [Getting Started](https://mongoosejs.com/docs/index.html)
 
-### Helpful VSCode Plugins
+## Helpful VSCode Plugins
 (ES6 Snippets)[https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets]
