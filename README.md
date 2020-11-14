@@ -17,3 +17,7 @@ The **Ground Up Server** project is a personal project with a goal of building a
 ### Setup Babel to allow ES6, nodemon, and dotenv
 [The minimal Node.js with Babel Setup](https://www.robinwieruch.de/minimal-node-js-babel-setup)
 
+### Connecting Mongoose to a MongoDB
+Obtain the mongoDB URI from your service and add to .env file. Never add a .env file to version control.
+[Getting Started](https://mongoosejs.com/docs/index.html)
+
