@@ -24,5 +24,9 @@ Mostly a boilerplate to get some of my personal projects running without startin
 Obtain the mongoDB URI from your service and add to .env file. Never add a .env file to version control.
 [Getting Started](https://mongoosejs.com/docs/index.html)
 
+### ES Lint with Airbnb Style guide
+Install the plugin and execute `./node_modules/.bin/eslint --init`
+[ES Lint Plugin](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+
 ## Helpful VSCode Plugins
 (ES6 Snippets)[https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets]
