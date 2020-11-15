@@ -12,6 +12,7 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
-    "import/prefer-default-export": 0
+    "import/prefer-default-export": 0,
+    "arrow-body-style": 0,
   },
 };
