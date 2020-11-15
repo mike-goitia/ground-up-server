@@ -20,5 +20,6 @@ export const book = gql`
 
   type Mutation {
     changeRenter(input: ChangeRenterInput): Book!
+    logoutUser: Boolean!
   }
 `;

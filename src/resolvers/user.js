@@ -1,14 +1,17 @@
-// eslint-disable-next-line import/no-cycle
-import { accountsServer } from '../index';
+import { createNewUser, getMe, logoutUser } from '../services/user';
 
 export const user = {
   Query: {
     me: (_, __, ctx) => {
-      // ctx.userId will be set if user is logged in
-      if (ctx.userId) {
-        return accountsServer.findUserById(ctx.userId);
-      }
-      return null;
+      return getMe({ ctx });
+    },
+  },
+  Mutation: {
+    createNewUser: async (_, { input: { email, password } }) => {
+      return createNewUser({ email, password });
+    },
+    logoutUser: async (_, __, ctx) => {
+      return logoutUser({ ctx });
     },
   },
 };

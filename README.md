@@ -11,8 +11,8 @@ Mostly a boilerplate to get some of my personal projects running without startin
 - [X] Create a MongoDb persistence layer
 - [X] Setup Linting and AirBnB Style Guide
 - [X] Create CI/CD pipeline with Github Actions and Deploy on Elastic Beanstalk
-- [ ] Give some examples of some advance Queries and Mutations with GQL
-- [ ] Simple Auth
+- [X] Give some examples of some advance Queries and Mutations with GQL
+- [X] Simple Auth
 - [ ] Social Auth
 - [ ] Permissions Layer with GraphQL Shield
 
@@ -44,7 +44,11 @@ Deploy to EB after merging to `main`
 [Deploy using Github Actions on AWS Elastic BeanStalk](https://medium.com/javascript-in-plain-english/deploy-using-github-actions-on-aws-elastic-beanstalk-c23ecd35776d)
 
 ### Email and Password Auth Using Accounts JS
-[https://www.apollographql.com/blog/email-password-authentication-with-accounts-js-and-apollo-server/](https://www.apollographql.com/blog/email-password-authentication-with-accounts-js-and-apollo-server/)
+[accounts-js and Apollo Server](https://www.apollographql.com/blog/email-password-authentication-with-accounts-js-and-apollo-server/)
+
 
 ## Helpful VSCode Plugins
 [ES6 Snippets](https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets)
+
+## Insomnia Requests
+`Insomnia_Client_Requests.json`
