@@ -12,5 +12,6 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
+    "import/prefer-default-export": 0
   },
 };

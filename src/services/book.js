@@ -1,9 +1,5 @@
-import { Book } from '../models/book.js';
+import { Book } from '../models/book';
 
-export const findRandomBook = () => {
-  return Book.findOne();
-}
+export const findRandomBook = () => Book.findOne();
 
-export const getAllBooks = () => {
-  return Book.find();
-}
+export const getAllBooks = () => Book.find();

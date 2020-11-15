@@ -1,4 +1,4 @@
-import { findRandomBook, getAllBooks } from '../services/book.js';
+import { findRandomBook, getAllBooks } from '../services/book';
 
 export const book = {
   Query: {

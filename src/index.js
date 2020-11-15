@@ -1,5 +1,6 @@
 import dotenv from 'dotenv';
-import { ApolloServer } from 'apollo-server';
+import express from 'express';
+import { ApolloServer } from 'apollo-server-express';
 import mongoose from 'mongoose';
 
 import { typeDefs } from './typeDefs';
@@ -18,6 +19,8 @@ db.once('open', () => {
 
 // Start Apollo Server
 const server = new ApolloServer({ typeDefs, resolvers });
-server.listen().then(({ url }) => {
-  console.log(`🚀 ${process.env.PROJECT_NAME} Server ready at ${url}`);
+const app = express();
+server.applyMiddleware({ app });
+app.listen({ port: 4000 }, () => {
+  console.log(`🚀 ${process.env.PROJECT_NAME} Server Ready`);
 });

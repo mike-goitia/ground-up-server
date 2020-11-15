@@ -1,3 +1,3 @@
 import { book } from './book';
 
-export const typeDefs = [ book ];
+export const typeDefs = [book];
