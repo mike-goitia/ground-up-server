@@ -13,6 +13,7 @@ Mostly a boilerplate to get some of my personal projects running without startin
 - [X] Create CI/CD pipeline with Github Actions and Deploy on Elastic Beanstalk
 - [X] Give some examples of some advance Queries and Mutations with GQL
 - [X] Simple Auth
+- [ ] Switch to TS
 - [ ] Social Auth
 - [ ] Permissions Layer with GraphQL Shield
 
