@@ -23,25 +23,28 @@ Mostly a boilerplate to get some of my personal projects running without startin
 ### Setup Babel to allow ES6, nodemon, and dotenv
 - Use Babel to code in ES6
 - Use Nodemon to watch for changes in your script for faster dev
-- Use dotenv to add environment variables and secrets specific to your project
+- Use dotenv to add environment variables and secrets specific to your project  
 [The minimal Node.js with Babel Setup](https://www.robinwieruch.de/minimal-node-js-babel-setup)
 
 ### Connecting Mongoose to a MongoDB
-Obtain the mongoDB URI from your service and add to .env file. Never add a .env file to version control.
+Obtain the mongoDB URI from your service and add to .env file. Never add a .env file to version control.  
 [Getting Started](https://mongoosejs.com/docs/index.html)
 
 ### ES Lint with AirBnB Style guide
 Use ES Lint with the AirBnB guide to keep your code clean
-Install the plugin and execute `./node_modules/.bin/eslint --init`
+Install the plugin and execute `./node_modules/.bin/eslint --init`  
 [ES Lint Plugin](https://github.com/babel/example-node-server)
 
 ### Transpiling with Babel for production
-Transpile your ES6 code for production
+Transpile your ES6 code for  
 [Example Node Server w/ Babel](https://mongoosejs.com/docs/index.html)
 
 ### Github actions for CI with Elastic Beanstalk
-Deploy to EB after merging to `main`
+Deploy to EB after merging to `main`  
 [Deploy using Github Actions on AWS Elastic BeanStalk](https://medium.com/javascript-in-plain-english/deploy-using-github-actions-on-aws-elastic-beanstalk-c23ecd35776d)
+
+### Email and Password Auth Using Accounts JS
+[https://www.apollographql.com/blog/email-password-authentication-with-accounts-js-and-apollo-server/](https://www.apollographql.com/blog/email-password-authentication-with-accounts-js-and-apollo-server/)
 
 ## Helpful VSCode Plugins
 [ES6 Snippets](https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets)

@@ -1,9 +1,15 @@
 import dotenv from 'dotenv';
 import express from 'express';
-import { ApolloServer } from 'apollo-server-express';
+import { ApolloServer, makeExecutableSchema } from 'apollo-server-express';
 import mongoose from 'mongoose';
+import MongoDBInterface from '@accounts/mongo';
+import { AccountsServer } from '@accounts/server';
+import { AccountsPassword } from '@accounts/password';
+import { AccountsModule } from '@accounts/graphql-api';
+import { mergeTypeDefs, mergeResolvers } from '@graphql-tools/merge';
 
 import { typeDefs } from './typeDefs';
+// eslint-disable-next-line import/no-cycle
 import { resolvers } from './resolvers';
 
 // Setup project to use .env file
@@ -21,8 +27,36 @@ db.once('open', () => {
   console.log(`🚀 Connected to ${process.env.PROJECT_NAME} MongoDB`);
 });
 
+// accounts-js to use the mongo connection
+const accountsMongo = new MongoDBInterface(mongoose.connection);
+const password = new AccountsPassword();
+export const accountsServer = new AccountsServer(
+  {
+    // We link the mongo adapter we created in the previous step to the server
+    db: accountsMongo,
+    // Replace this value with a strong random secret
+    tokenSecret: process.env.ACCOUNTS_TOKEN_SECRET,
+  },
+  {
+    password,
+  },
+);
+const accountsGraphQL = AccountsModule.forRoot({ accountsServer });
+const mergedTypedefs = mergeTypeDefs([...typeDefs, accountsGraphQL.typeDefs]);
+const mergedResolvers = mergeResolvers([...resolvers, accountsGraphQL.resolvers]);
+const schema = makeExecutableSchema({
+  typeDefs: mergedTypedefs,
+  resolvers: mergedResolvers,
+  schemaDirectives: {
+    ...accountsGraphQL.schemaDirectives,
+  },
+});
+
 // Start Apollo Server
-const server = new ApolloServer({ typeDefs, resolvers });
+const server = new ApolloServer({
+  schema,
+  context: accountsGraphQL.context,
+});
 const app = express();
 server.applyMiddleware({ app });
 app.listen({ port: process.env.PORT || 4000 }, () => {

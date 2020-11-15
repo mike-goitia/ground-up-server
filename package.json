@@ -10,10 +10,16 @@
     "dev": "nodemon --exec babel-node src/index.js"
   },
   "dependencies": {
+    "@accounts/graphql-api": "^0.29.0",
+    "@accounts/mongo": "^0.29.0",
+    "@accounts/password": "^0.29.0",
+    "@accounts/server": "^0.29.0",
     "@babel/cli": "^7.12.1",
     "@babel/core": "^7.12.3",
     "@babel/node": "^7.12.6",
     "@babel/preset-env": "^7.12.1",
+    "@graphql-modules/core": "^0.7.17",
+    "@graphql-tools/merge": "^6.2.5",
     "apollo-server-express": "^2.19.0",
     "body-parser": "^1.19.0",
     "dotenv": "^8.2.0",

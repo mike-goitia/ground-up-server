@@ -18,7 +18,6 @@ export const book = gql`
     books: [Book]
   }
 
-
   type Mutation {
     changeRenter(input: ChangeRenterInput): Book!
   }
