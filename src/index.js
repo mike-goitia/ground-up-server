@@ -21,6 +21,12 @@ db.once('open', () => {
 const server = new ApolloServer({ typeDefs, resolvers });
 const app = express();
 server.applyMiddleware({ app });
-app.listen({ port: 4000 }, () => {
-  console.log(`🚀 ${process.env.PROJECT_NAME} Server Ready`);
+app.listen({ port: process.env.PORT || 4000 }, () => {
+  console.log(`🚀 ${process.env.PROJECT_NAME} Server Ready on port: ${process.env.PORT}`);
 });
+
+app.get('/', (req, res) => {
+  res.send(`🚀 ${process.env.PROJECT_NAME}`);
+});
+
+export default server;

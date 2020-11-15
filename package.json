@@ -1,14 +1,19 @@
 {
   "name": "ground-up-server",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/index.js",
   "repository": "https://github.com/mike-goitia/ground-up-server",
   "author": "Michael Sarmiento",
   "license": "MIT",
   "scripts": {
+    "start": "babel src -d dist && node dist/index.js",
     "dev": "nodemon --exec babel-node src/index.js"
   },
   "dependencies": {
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.3",
+    "@babel/node": "^7.12.6",
+    "@babel/preset-env": "^7.12.1",
     "apollo-server-express": "^2.19.0",
     "body-parser": "^1.19.0",
     "dotenv": "^8.2.0",
@@ -18,9 +23,6 @@
     "nodemon": "^2.0.6"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.3",
-    "@babel/node": "^7.12.6",
-    "@babel/preset-env": "^7.12.1",
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1"

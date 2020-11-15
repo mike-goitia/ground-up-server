@@ -9,9 +9,9 @@ Mostly a boilerplate to get some of my personal projects running without startin
 ## Goals
 - [X] Create a Node + Apollo GraphQL Backend Service
 - [X] Create a MongoDb persistence layer
-- [ ] Setup Linting and AirBnB Style Guide
-- [ ] Create CI/CD pipeline with Circle CI
-- [ ] Deploy on Elastic Beanstalk
+- [X] Setup Linting and AirBnB Style Guide
+- [X] Create CI/CD pipeline with Github Actions and Deploy on Elastic Beanstalk
+- [] Give some examples of some advance Queries and Mutations with GQL
 
 ## Guides I Used
 ### Setup Apollo Server
@@ -26,7 +26,13 @@ Obtain the mongoDB URI from your service and add to .env file. Never add a .env 
 
 ### ES Lint with Airbnb Style guide
 Install the plugin and execute `./node_modules/.bin/eslint --init`
-[ES Lint Plugin](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+[ES Lint Plugin](https://github.com/babel/example-node-server)
+
+### Transpiling with Babel for production
+[Example Node Server w/ Babel](https://mongoosejs.com/docs/index.html)
+
+### Github actions for CI with Elastic Beanstalk
+[Deploy using Github Actions on AWS Elastic BeanStalk](https://medium.com/javascript-in-plain-english/deploy-using-github-actions-on-aws-elastic-beanstalk-c23ecd35776d)
 
 ## Helpful VSCode Plugins
 (ES6 Snippets)[https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets]
