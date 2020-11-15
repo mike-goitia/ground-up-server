@@ -17,6 +17,7 @@
     "@babel/cli": "^7.12.1",
     "@babel/core": "^7.12.3",
     "@babel/node": "^7.12.6",
+    "@babel/plugin-transform-runtime": "^7.12.1",
     "@babel/preset-env": "^7.12.1",
     "@graphql-modules/core": "^0.7.17",
     "@graphql-tools/merge": "^6.2.5",
